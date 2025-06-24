@@ -80,3 +80,16 @@ MIT License — free to use, modify, and distribute with attribution 📜
 
 Matthew Murphy (`matthewxmurphy`)
 GitHub: [https://github.com/matthewxmurphy/AmazonSES-EnhanceDNS](https://github.com/matthewxmurphy/AmazonSES-EnhanceDNS)
+
+---
+
+## 🌐 Connect & More
+
+* Official Site: [https://Net30Hosting.com](https://Net30Hosting.com)
+* GitHub: [https://github.com/matthewxmurphy](https://github.com/matthewxmurphy)
+* TikTok: [https://tiktok.com/@net30hosting](https://tiktok.com/@net30hosting)
+* Instagram: [https://instagram.com/net30hosting](https://instagram.com/net30hosting)
+* Twitter/X: [https://twitter.com/net30hosting](https://twitter.com/net30hosting)
+* Facebook (Business): [https://facebook.com/net30hosting](https://facebook.com/net30hosting)
+* Pinterest: [https://pinterest.com/net30hosting](https://pinterest.com/net30hosting)
+* Facebook (Personal): Coming Soon after July 3rd username change
