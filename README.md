@@ -1,20 +1,77 @@
-# AmazonSES-EnhanceDNS
+AmazonSES-EnhanceDNS 🚀
 
-Automate the injection of Amazon SES DKIM, DMARC, and other email-related DNS records into Enhance DNS Role servers.
+Automate Amazon SES DKIM, DMARC, and SPF DNS record injection into Enhance DNS Role servers. 🔒✨
 
-## Features
-- Pulls DKIM and DMARC records from Amazon-generated CSV files
-- Supports multiple Enhance DNS servers via REST API
-- Configurable TTL for fast DNS propagation
-- Future-proof structure for SPF, TXT, and multi-region support
+⸻
 
-## Usage
+🔧 Features
+	•	✅ Automated DKIM, DMARC, and SPF record management for Enhance DNS
+	•	📂 CSV-based record input for easy bulk management
+	•	🔄 Prevents duplicate DNS records with built-in checks
+	•	🗺️ Auto-detects Enhance DNS servers and zones via API
+	•	🌐 Self-detects Enhance API endpoint (localhost or public IP fallback)
+	•	🛠️ Generates example config and CSV templates on first run
+	•	🐚 Lightweight and portable Bash-based tool
 
-1. Place your SES-generated `dkim-dns-records.csv` and `dmarc-dns-records.csv` in the script directory.
-2. Edit `enhance-dns-sync.sh`:
-   - Add your Enhance API token
-   - Update your Enhance DNS server IPs
-3. Run:
-   ```bash
-   chmod +x enhance-dns-sync.sh
-   ./enhance-dns-sync.sh
+⸻
+
+⚙️ Requirements
+	•	Enhance control panel with DNS Role servers active
+	•	Enhance API access with valid API token
+	•	Bash 5+, curl, jq utilities installed
+
+⸻
+
+🚀 Quick Start
+	1.	Clone this repository
+	2.	Make the script executable:
+
+chmod +x enhance-dns-sync.sh
+
+
+	3.	Run the script:
+
+./enhance-dns-sync.sh
+
+
+	4.	On first run, the script will:
+	•	🗂️ Create config/enhance.conf — add your API token and TTL
+	•	📁 Create a csv/ directory with example DKIM, DMARC, and SPF CSV files
+	5.	Edit config/enhance.conf:
+
+API_TOKEN=your-enhance-api-token-here
+TTL=300
+
+
+	6.	Populate the csv/ directory with valid DNS record CSV files
+	7.	Run the script again to inject records into Enhance DNS 🎯
+
+⸻
+
+📝 Example CSV Format
+
+Name,Type,Value
+blv2f4afvj6bl4q7up4ovxa5hvwwn4vp._domainkey.example.yourdomain.com,CNAME,blv2f4afvj6bl4q7up4ovxa5hvwwn4vp.dkim.amazonses.com.
+_dmarc.example.yourdomain.com,TXT,"v=DMARC1; p=none;"
+yourdomain.com,TXT,"v=spf1 include:amazonses.com ~all"
+
+
+⸻
+
+🏷️ Versioning
+	•	Current Version: 0.9.0-beta
+	•	🛠️ Production 1.0.0 planned after further testing
+
+⸻
+
+🪪 License
+
+MIT License — free to use, modify, and distribute with attribution. 📜
+
+⸻
+
+👨‍💻 Author
+
+Matthew Murphy (matthewxmurphy)
+
+GitHub: https://github.com/matthewxmurphy/AmazonSES-EnhanceDNS
