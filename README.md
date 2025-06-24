@@ -60,13 +60,13 @@ yourdomain.com,TXT,"v=spf1 include:amazonses.com ~all"
 
 🏷️ Versioning
 	•	Current Version: 0.9.0-beta
-	•	🛠️ Production 1.0.0 planned after further testing
+	•	Production 1.0.0 planned after further testing 🛠️
 
 ⸻
 
 🪪 License
 
-MIT License — free to use, modify, and distribute with attribution. 📜
+MIT License — free to use, modify, and distribute with attribution 📜
 
 ⸻
 
