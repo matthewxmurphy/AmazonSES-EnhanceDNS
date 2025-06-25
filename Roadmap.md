@@ -1,83 +1,86 @@
-AmazonSES-EnhanceDNS 🚀
+# 📍 AmazonSES-EnhanceDNS Roadmap
 
-Automates Amazon SES DKIM, DMARC, and SPF DNS record injection into Enhance DNS Role servers.
-Supports CSV-driven bulk record import, smart DNS troubleshooting, and planned API integrations.
+This project automates Amazon SES DKIM, DMARC, SPF, and DNS record injection into Enhance DNS Role servers. Future iterations will evolve into a full DNS monitoring, compliance, and troubleshooting suite.
 
-⸻
+---
 
-Features ✨
-	•	Automated injection of Amazon SES DKIM, DMARC, SPF records
-	•	Reads records from /csv directory (supports multiple files)
-	•	Dynamic Enhance DNS server discovery via API
-	•	Detects Enhance zones via API (planned improvements)
-	•	Troubleshooting tools for DNS health (SOA checks, trace logic)
-	•	Safe defaults for DMARC/SPF with interactive config prompts
-	•	Generates example CSV files on first run
-	•	Roadmap includes full Enhance API integration and automated SES region syncing
-	•	Designed for future scalability across Enhance-powered hosting platforms
+## 🎯 Current Milestones
 
-⸻
+✅ Basic shell script syncs DKIM, DMARC, and SPF records using Enhance API  
+✅ Supports CSV directory for record management  
+✅ First-time run interactive setup for API token and TTL  
+✅ Optional Cloudflare .txt export supported (manual import required)  
+✅ MIT Licensed, Open Source, Public on GitHub  
 
-Quick Start 🛠️
+---
 
-git clone https://github.com/matthewxmurphy/AmazonSES-EnhanceDNS.git
-cd AmazonSES-EnhanceDNS
-chmod +x enhance-dns-sync.sh
-./enhance-dns-sync.sh
+## 🛠️ Upcoming Features
 
-On first run, you’ll be prompted for:
-	•	Enhance API token
-	•	DNS record TTL (default 300 seconds)
+- [ ] **Enhanced DNS Troubleshooter**  
+  - Detects NS providers (Cloudflare, Enhance, etc.)  
+  - Checks for SOA validity  
+  - Runs iterative `dig` tests to identify missing/incorrect records  
+  - Provides human-readable remediation steps  
 
-Example CSVs will be generated in the /csv folder.
+- [ ] **Intelligent DMARC & SPF Templates**  
+  - Auto-suggests compliant policies based on best practices  
+  - Dynamic `admin@domain` injection based on hostname stripping logic  
 
-⸻
+- [ ] **Automated Email Account Provisioning (Enhance-only)**  
+  - Ensures required emails (`report@`, `admin@`) exist  
+  - Generates secure random passwords (12+ chars, upper/lower/special)  
+  - Optional forwarding setup for central monitoring  
 
-Example CSV Format 📂
+- [ ] **Full Enhance API Integration**  
+  - Dynamically detects DNS Role servers, zones, records  
+  - Supports record deletion, updates, and auditing via API  
 
-csv/dkim-example.csv
+- [ ] **Regional Amazon SES Expansion**  
+  - Automates pulling SES records for multiple regions  
+  - Ensures no manual copy-paste across regions  
 
-Name,Type,Value
-2kc777iublrxsi5gwrmsln6uuk3xkvvb._domainkey,CNAME,2kc777iublrxsi5gwrmsln6uuk3xkvvb.dkim.amazonses.com.
+- [ ] **Installation & Maintenance Enhancements**  
+  - Config directory supports API token, TTL, defaults  
+  - Upgrade-safe script evolution (no token overwrites)  
+  - MOTD integration (disk space, update status, SES health)  
 
-csv/dmarc-example.csv
+---
 
-Name,Type,Value
-_dmarc,TXT,"v=DMARC1; p=none; rua=mailto:dmarc-reports@example.com; ruf=mailto:dmarc-failures@example.com; sp=none; aspf=r;"
+## 📊 Long-Term Vision
 
-csv/spf-example.csv
+- Subscription model with affordable pricing (TBD)  
+- Commercial-grade Enhance and Amazon SES integration tools  
+- Automatic system update utility for Enhance servers (separate tool)  
+- Multi-server orchestration capabilities  
+- Dynamic MOTD educating sysadmins about installed tools  
+- Enterprise-grade compliance reporting  
+- Troubleshooting logic built-in to reduce admin guesswork  
 
-Name,Type,Value
-mail,TXT,"v=spf1 include:amazonses.com ~all"
+---
 
+## ⚡ Target Audience
 
-⸻
+- Enhance hosting providers (DNS Role users)  
+- Amazon SES users seeking automation  
+- Admins prioritizing compliance, uptime, and monitoring  
+- Small businesses seeking affordable DNS automation  
 
-Project Details 📝
-	•	Author: Matthew Murphy
-	•	Official Branding: Net30Hosting.com
-	•	License: MIT
-	•	Status: Beta
+---
 
-⸻
+## 👷 Development Status
 
-Roadmap 🗺️
-	•	✅ Local Enhance API discovery
-	•	✅ CSV-driven DNS imports
-	•	✅ Interactive first-run setup
-	•	🚧 Enhance DNS API auto-detection
-	•	🚧 Automated DNS health checks with solutions
-	•	🚧 SES region expansion automation
-	•	🚧 Troubleshooting logic for SOA/NXDOMAIN errors
-	•	🚧 Future Twilio/SMS integration
+**Current Version:** 0.9.1-beta  
+**Author:** Matthew Murphy ([net30hosting.com](https://www.net30hosting.com))  
 
-⸻
+Follow project updates on:  
+[GitHub](https://github.com/matthewxmurphy) • [Facebook](https://www.facebook.com/net30hosting) • [Instagram](https://www.instagram.com/net30hosting) • [TikTok](https://www.tiktok.com/@net30hosting)
 
-Connect 📣
-	•	Facebook: Net30Hosting
-	•	Instagram/TikTok/Pinterest: @net30hosting
-	•	Matthew’s Site: MatthewXMurphy.com
+---
 
-⸻
+## 🚀 Contributing
 
-“Monitor smarter. Deploy faster. Stay compliant.” ⚡
+Community contributions are welcome. Please submit issues, feature requests, or pull requests on GitHub.
+
+---
+
+© 2025 Matthew Murphy. Licensed under the MIT License.
